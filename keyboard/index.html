@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Keyboard Neuro</title>
+  </head>
+  <body>
+    <div class="container">
+      <form class="wrapper" name="form">
+        <div class="display">
+          <textarea name="textarea" cols="30" rows="10"></textarea>
+        </div>
+        <div class="keys">
+          <input type="button" value="A" name="A" onclick="disp(A.value)" />
+          <input type="button" value="Z" name="Z" onclick="disp(Z.value)" />
+          <input type="button" value="E" name="E" onclick="disp(E.value)" />
+          <input type="button" value="R" name="R" onclick="disp(R.value)" />
+          <input type="button" value="T" name="T" onclick="disp(T.value)" />
+          <input type="button" value="Y" name="Y" onclick="disp(Y.value)" />
+          <input type="button" value="U" name="U" onclick="disp(U.value)" />
+          <input type="button" value="I" name="I" onclick="disp(I.value)" />
+          <input type="button" value="O" name="O" onclick="disp(O.value)" />
+          <input type="button" value="P" name="P" onclick="disp(P.value)" />
+          <input type="button" value="^" />
+          <input type="button" value="$" name="$" onclick="disp($.value)" />
+        </div>
+        <div class="keys">
+          <input type="button" value="Q" name="Q" onclick="disp(Q.value)" />
+          <input type="button" value="S" name="S" onclick="disp(S.value)" />
+          <input type="button" value="D" name="D" onclick="disp(D.value)" />
+          <input type="button" value="F" name="F" onclick="disp(F.value)" />
+          <input type="button" value="G" name="G" onclick="disp(G.value)" />
+          <input type="button" value="H" name="H" onclick="disp(H.value)" />
+          <input type="button" value="J" name="J" onclick="disp(J.value)" />
+          <input type="button" value="K" name="J" onclick="disp(K.value)" />
+          <input type="button" value="L" name="L" onclick="disp(L.value)" />
+          <input type="button" value="M" name="M" onclick="disp(M.value)" />
+          <input type="button" value="%" />
+          <input type="button" value="*" />
+        </div>
+        <div class="keys">
+          <input type="button" value="< >" />
+          <input type="button" value="W" name="W" onclick="disp(W.value)" />
+          <input type="button" value="X" name="X" onclick="disp(X.value)" />
+          <input type="button" value="C" name="C" onclick="disp(C.value)" />
+          <input type="button" value="V" name="V" onclick="disp(V.value)" />
+          <input type="button" value="B" name="B" onclick="disp(B.value)" />
+          <input type="button" value="N" name="N" onclick="disp(N.value)" />
+          <input type="button" value="," />
+          <input type="button" value=";" />
+          <input type="button" value=":" />
+          <input type="button" value="!" />
+        </div>
+        <div class="keys-space">
+          <input type="button" value="CTRL" />
+          <input type="button" value="WIN" />
+          <input type="button" value="ALT" />
+          <input type="button" class="space" value="SPACE" />
+          <input type="button" value="ALTGr" />
+          <input type="button" value="fn" />
+          <input type="button" value="CTRL" />
+        </div>
+      </form>
+    </div>
+
+    <script>
+      const spaceBtn = document.querySelector(".space");
+      const display = document.querySelector(".display");
+      function disp(result) {
+        form.textarea.value = form.textarea.value + result;
+        spaceBtn.onclick = () => {
+          form.textarea.value += " ";
+        };
+        //The ondblclick is an event attribute in HTML that is used with JavaScript to define a script to be run when an element is double-clicked by the user.
+        display.ondblclick = () => {
+          form.textarea.value = "";
+        };
+      }
+    </script>
+  </body>
+</html>
