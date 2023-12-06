@@ -151,14 +151,14 @@ body {
 .wrapper .keys input:active {
   color: #3498db;
   font-size: 19px;
-  box-shadow: inset -3px -3px 7px #ffffff73,
+  box-shadow: inset -3px -3px 7px #73e5ff,
     inset 2px 2px 5px rgba(94, 104, 121, 0.288);
 }
 
 .wrapper .keys-space input:active {
   color: #3498db;
   font-size: 19px;
-  box-shadow: inset -3px -3px 7px #ffffff73,
+  box-shadow: inset -3px -3px 7px #ffff73,
     inset 2px 2px 5px rgba(94, 104, 121, 0.288);
 }
 
@@ -183,4 +183,17 @@ body {
   pointer-events: none;
   box-shadow: inset -3px -3px 7px #ffffff73,
     inset 2px 2px 5px rgba(94, 104, 121, 0.288);
+}
+
+.text-title {
+  color: #dde1e7;
+  font-size: 3em;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(99, 100, 100, 0.288);
+  position: relative;
+  margin-bottom: 2rem;
+  text-align: center;
+  margin-right: 3rem;
 }
